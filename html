@@ -1,0 +1,2550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AMG REALTORS | Real Estate Kenya</title>
+
+<meta name="description" content="AMG Realtors - Property sales, land investment and real estate services in Nairobi, Kenya.">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #0b5cff;
+}
+
+.logo span {
+    color: #172033;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0b5cff;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(4,17,38,0.78),
+            rgba(4,17,38,0.78)
+        ),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero-small {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #4e8cff;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #0b5cff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0646c9;
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background: white;
+    color: #172033;
+    margin-left: 10px;
+}
+
+.btn-light:hover {
+    background: #eeeeee;
+}
+
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+    background: white;
+    margin-top: -55px;
+    position: relative;
+    z-index: 10;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.12);
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 0.8fr;
+    gap: 15px;
+}
+
+.search-grid input,
+.search-grid select {
+    width: 100%;
+    padding: 16px;
+
+    border: 2px solid #e2e2e2;
+    border-radius: 10px;
+
+    outline: none;
+    background: #fff;
+
+    font-size: 16px;
+}
+
+.search-grid input:focus,
+.search-grid select:focus {
+    border-color: #0b5cff;
+}
+
+.search-grid button {
+    width: 100%;
+}
+
+#searchResult {
+    margin-top: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #0b5cff;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #687386;
+    font-size: 17px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.service {
+    background: white;
+    padding: 35px 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.service p {
+    color: #687386;
+}
+
+
+/* =========================
+   PROPERTIES
+========================= */
+
+.properties {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.property {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.property:hover {
+    transform: translateY(-7px);
+}
+
+.property-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 22px;
+}
+
+.property-info h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: #687386;
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #0b5cff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.property-details {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #eee;
+
+    margin-top: 15px;
+    padding-top: 15px;
+
+    color: #555;
+    font-size: 14px;
+}
+
+.property-btn {
+    display: block;
+
+    text-align: center;
+
+    background: #0b5cff;
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-top: 18px;
+}
+
+.property-btn:hover {
+    background: #0646c9;
+}
+
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: #687386;
+}
+
+.no-results h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+
+    border-radius: 18px;
+}
+
+.about h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #687386;
+    margin-bottom: 18px;
+}
+
+.about-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.about-list li {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    background: #0b5cff;
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 40px;
+}
+
+.stat p {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.testimonial {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.stars {
+    color: #f5a623;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-box {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.contact-box h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin-bottom: 22px;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #687386;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #0b5cff;
+}
+
+.contact-form textarea {
+    height: 130px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #101827;
+    color: white;
+
+    padding: 60px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 35px;
+}
+
+.footer-grid h3 {
+    margin-bottom: 18px;
+}
+
+.footer-grid p {
+    color: #aab4c5;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    color: #aab4c5;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #293344;
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    color: #9aa5b5;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    background: #25d366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 29px;
+
+    z-index: 999;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.72);
+
+    z-index: 2000;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+
+    width: 100%;
+    max-width: 550px;
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    position: relative;
+}
+
+.close {
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-location {
+    color: #687386;
+}
+
+.modal-price {
+    color: #0b5cff;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 900px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .search-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services,
+    .properties,
+    .testimonials {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media(max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        min-height: 590px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+
+        margin: 10px 0;
+    }
+
+    .btn-light {
+        margin-left: 0;
+    }
+
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .properties,
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .about h2 {
+        font-size: 34px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+AMG <span>REALTORS</span>
+</a>
+
+<div class="menu-btn" id="menuBtn">
+☰
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#properties">Properties</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-small">
+TRUSTED REAL ESTATE PARTNER
+</div>
+
+<h1>
+Find Your
+<span>Perfect Property</span>
+in Kenya
+</h1>
+
+<p>
+Discover quality homes, apartments, land and
+real estate investment opportunities with AMG Realtors.
+</p>
+
+<a href="#properties" class="btn btn-primary">
+Explore Properties
+</a>
+
+<a href="#contact" class="btn btn-light">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SEARCH
+========================= -->
+
+<div class="container">
+
+<div class="search-box">
+
+<div class="search-grid">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search location..."
+>
+
+<select id="typeFilter">
+
+<option value="all">
+All Property Types
+</option>
+
+<option value="house">
+House
+</option>
+
+<option value="apartment">
+Apartment
+</option>
+
+<option value="land">
+Land
+</option>
+
+</select>
+
+
+<select id="priceFilter">
+
+<option value="all">
+Any Price
+</option>
+
+<option value="10000000">
+Below KSh 10M
+</option>
+
+<option value="30000000">
+Below KSh 30M
+</option>
+
+</select>
+
+
+<button
+id="searchButton"
+type="button"
+class="btn btn-primary">
+
+🔎 Search
+
+</button>
+
+</div>
+
+
+<div id="searchResult"></div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Services</h2>
+
+<p>
+Professional real estate solutions designed around your needs.
+</p>
+
+</div>
+
+
+<div class="services">
+
+
+<div class="service">
+
+<div class="service-icon">
+🏠
+</div>
+
+<h3>
+Property Sales
+</h3>
+
+<p>
+Find and purchase quality residential and commercial properties.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+🌍
+</div>
+
+<h3>
+Land Investment
+</h3>
+
+<p>
+Discover strategic land investment opportunities in Kenya.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+💼
+</div>
+
+<h3>
+Property Investment
+</h3>
+
+<p>
+Get professional guidance when investing in real estate.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROPERTIES
+========================= -->
+
+<section id="properties">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Featured Properties
+</h2>
+
+<p>
+Explore available property opportunities.
+</p>
+
+</div>
+
+
+<div class="properties" id="propertyGrid">
+
+
+<!-- PROPERTY 1 -->
+
+<div
+class="property"
+data-type="house"
+data-price="8500000"
+data-location="Ruiru Kiambu Kenya"
+>
+
+<img
+class="property-img"
+src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80"
+alt="Modern Family Home"
+>
+
+<div class="property-info">
+
+<h3>
+Modern Family Home
+</h3>
+
+<div class="location">
+📍 Ruiru, Kiambu
+</div>
+
+<div class="price">
+KSh 8.5M
+</div>
+
+<div class="property-details">
+
+<span>🛏 4 Beds</span>
+
+<span>🛁 3 Baths</span>
+
+<span>📐 240m²</span>
+
+</div>
+
+<a
+href="#"
+class="property-btn"
+data-title="Modern Family Home"
+data-location="Ruiru, Kiambu"
+data-price="KSh 8.5M"
+>
+View Property
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROPERTY 2 -->
+
+<div
+class="property"
+data-type="apartment"
+data-price="12500000"
+data-location="Nairobi Kenya"
+>
+
+<img
+class="property-img"
+src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+alt="Luxury City Apartment"
+>
+
+<div class="property-info">
+
+<h3>
+Luxury City Apartment
+</h3>
+
+<div class="location">
+📍 Nairobi
+</div>
+
+<div class="price">
+KSh 12.5M
+</div>
+
+<div class="property-details">
+
+<span>🛏 3 Beds</span>
+
+<span>🛁 2 Baths</span>
+
+<span>📐 180m²</span>
+
+</div>
+
+<a
+href="#"
+class="property-btn"
+data-title="Luxury City Apartment"
+data-location="Nairobi, Kenya"
+data-price="KSh 12.5M"
+>
+View Property
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROPERTY 3 -->
+
+<div
+class="property"
+data-type="land"
+data-price="4500000"
+data-location="Juja Kiambu Kenya"
+>
+
+<img
+class="property-img"
+src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+alt="Prime Development Land"
+>
+
+<div class="property-info">
+
+<h3>
+Prime Development Land
+</h3>
+
+<div class="location">
+📍 Juja, Kiambu
+</div>
+
+<div class="price">
+KSh 4.5M
+</div>
+
+<div class="property-details">
+
+<span>📐 1/2 Acre</span>
+
+<span>🛣 Road Access</span>
+
+<span>💧 Water</span>
+
+</div>
+
+<a
+href="#"
+class="property-btn"
+data-title="Prime Development Land"
+data-location="Juja, Kiambu"
+data-price="KSh 4.5M"
+>
+View Property
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROPERTY 4 -->
+
+<div
+class="property"
+data-type="house"
+data-price="15000000"
+data-location="Karen Nairobi Kenya"
+>
+
+<img
+class="property-img"
+src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80"
+alt="Luxury Family House"
+>
+
+<div class="property-info">
+
+<h3>
+Luxury Family House
+</h3>
+
+<div class="location">
+📍 Karen, Nairobi
+</div>
+
+<div class="price">
+KSh 15M
+</div>
+
+<div class="property-details">
+
+<span>🛏 5 Beds</span>
+
+<span>🛁 4 Baths</span>
+
+<span>📐 350m²</span>
+
+</div>
+
+<a
+href="#"
+class="property-btn"
+data-title="Luxury Family House"
+data-location="Karen, Nairobi"
+data-price="KSh 15M"
+>
+View Property
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROPERTY 5 -->
+
+<div
+class="property"
+data-type="apartment"
+data-price="7500000"
+data-location="Westlands Nairobi Kenya"
+>
+
+<img
+class="property-img"
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
+alt="Modern Apartment"
+>
+
+<div class="property-info">
+
+<h3>
+Modern Westlands Apartment
+</h3>
+
+<div class="location">
+📍 Westlands, Nairobi
+</div>
+
+<div class="price">
+KSh 7.5M
+</div>
+
+<div class="property-details">
+
+<span>🛏 2 Beds</span>
+
+<span>🛁 2 Baths</span>
+
+<span>📐 130m²</span>
+
+</div>
+
+<a
+href="#"
+class="property-btn"
+data-title="Modern Westlands Apartment"
+data-location="Westlands, Nairobi"
+data-price="KSh 7.5M"
+>
+View Property
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROPERTY 6 -->
+
+<div
+class="property"
+data-type="land"
+data-price="6500000"
+data-location="Thika Kiambu Kenya"
+>
+
+<img
+class="property-img"
+src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+alt="Thika Land"
+>
+
+<div class="property-info">
+
+<h3>
+Prime Thika Land
+</h3>
+
+<div class="location">
+📍 Thika, Kiambu
+</div>
+
+<div class="price">
+KSh 6.5M
+</div>
+
+<div class="property-details">
+
+<span>📐 1 Acre</span>
+
+<span>🛣 Road Access</span>
+
+<span>💧 Water</span>
+
+</div>
+
+<a
+href="#"
+class="property-btn"
+data-title="Prime Thika Land"
+data-location="Thika, Kiambu"
+data-price="KSh 6.5M"
+>
+View Property
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div
+id="noResults"
+class="no-results"
+>
+
+<h3>
+No Properties Found
+</h3>
+
+<p>
+Try another location, property type or price range.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container about">
+
+<div>
+
+<img
+src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
+alt="Real Estate"
+>
+
+</div>
+
+
+<div>
+
+<h2>
+About AMG Realtors
+</h2>
+
+<p>
+AMG Realtors is a real estate and property investment
+company serving clients looking for quality property
+opportunities in Nairobi and surrounding areas.
+</p>
+
+<p>
+Our goal is to make property buying and investment
+simpler, more transparent and professional.
+</p>
+
+
+<ul class="about-list">
+
+<li>
+✓ Professional property guidance
+</li>
+
+<li>
+✓ Property sales and investment
+</li>
+
+<li>
+✓ Land opportunities
+</li>
+
+<li>
+✓ Customer-focused service
+</li>
+
+</ul>
+
+
+<a
+href="#contact"
+class="btn btn-primary"
+>
+Talk To Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+
+<h3>
+100+
+</h3>
+
+<p>
+Property Opportunities
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>
+50+
+</h3>
+
+<p>
+Happy Clients
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>
+5+
+</h3>
+
+<p>
+Years Experience
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>
+24/7
+</h3>
+
+<p>
+Online Inquiries
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TESTIMONIALS
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+What Clients Say
+</h2>
+
+<p>
+Trusted property services for our clients.
+</p>
+
+</div>
+
+
+<div class="testimonials">
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"AMG Realtors made my property search much easier.
+The team was professional and helpful."
+</p>
+
+<br>
+
+<strong>
+— Client
+</strong>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Very good experience. I received helpful information
+about property investment."
+</p>
+
+<br>
+
+<strong>
+— Property Investor
+</strong>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Professional service and good communication throughout
+the process."
+</p>
+
+<br>
+
+<strong>
+— Client
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Contact AMG Realtors
+</h2>
+
+<p>
+Ready to find your next property? Talk to us today.
+</p>
+
+</div>
+
+
+<div class="contact">
+
+
+<!-- CONTACT INFORMATION -->
+
+<div class="contact-box">
+
+<h3>
+Our Office
+</h3>
+
+
+<div class="contact-item">
+
+<strong>
+📍 Address
+</strong>
+
+<p>
+Nairobi Pentecostal Bible College,<br>
+2nd Floor,<br>
+Garden Estate Road,<br>
+Nairobi, Kenya
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+📞 Phone
+</strong>
+
+<p>
+<a href="tel:+254796888555">
++254 796 888555
+</a>
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+💬 WhatsApp
+</strong>
+
+<p>
+<a
+href="https://wa.me/254796888555"
+target="_blank"
+>
+Chat with us on WhatsApp
+</a>
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+🌐 Website
+</strong>
+
+<p>
+AMG Realtors
+</p>
+
+</div>
+
+
+<iframe
+class="map"
+src="https://www.google.com/maps?q=AMG%20Realtors%20Nairobi&output=embed"
+loading="lazy">
+</iframe>
+
+
+</div>
+
+
+<!-- CONTACT FORM -->
+
+<div class="contact-box contact-form">
+
+<h3>
+Send an Inquiry
+</h3>
+
+<form id="contactForm">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required
+>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required
+>
+
+<input
+type="email"
+id="email"
+placeholder="Email Address"
+>
+
+<select id="interest">
+
+<option value="">
+I'm interested in...
+</option>
+
+<option>
+Buying a House
+</option>
+
+<option>
+Buying an Apartment
+</option>
+
+<option>
+Buying Land
+</option>
+
+<option>
+Property Investment
+</option>
+
+</select>
+
+
+<textarea
+id="message"
+placeholder="Tell us what you are looking for..."
+required>
+</textarea>
+
+
+<button
+class="btn btn-primary"
+type="submit"
+>
+Send Inquiry
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+AMG REALTORS
+</h3>
+
+<p>
+Professional real estate and property investment
+services in Kenya.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<ul class="footer-links">
+
+<li>
+<a href="#home">
+Home
+</a>
+</li>
+
+<li>
+<a href="#properties">
+Properties
+</a>
+</li>
+
+<li>
+<a href="#services">
+Services
+</a>
+</li>
+
+<li>
+<a href="#about">
+About
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Services
+</h3>
+
+<ul class="footer-links">
+
+<li>
+Property Sales
+</li>
+
+<li>
+Land Investment
+</li>
+
+<li>
+Property Investment
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<ul class="footer-links">
+
+<li>
+0796 888555
+</li>
+
+<li>
+Nairobi, Kenya
+</li>
+
+<li>
+Garden Estate Road
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 AMG Realtors. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP BUTTON
+========================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/254796888555?text=Hello%20AMG%20Realtors%2C%20I%20am%20interested%20in%20your%20properties."
+target="_blank"
+aria-label="WhatsApp"
+>
+💬
+</a>
+
+
+<!-- =========================
+     PROPERTY MODAL
+========================= -->
+
+<div
+class="modal"
+id="propertyModal"
+>
+
+<div class="modal-content">
+
+<span
+class="close"
+id="closeModal"
+>
+×
+</span>
+
+
+<h2 id="modalTitle">
+Property
+</h2>
+
+
+<p
+id="modalLocation"
+class="modal-location"
+>
+</p>
+
+
+<br>
+
+
+<div
+id="modalPrice"
+class="modal-price"
+>
+</div>
+
+
+<br>
+
+
+<p>
+For more information about this property,
+please contact AMG Realtors.
+</p>
+
+
+<br>
+
+
+<a
+href="tel:+254796888555"
+class="btn btn-primary"
+>
+📞 Call
+</a>
+
+
+<a
+href="https://wa.me/254796888555"
+target="_blank"
+class="btn btn-light"
+>
+💬 WhatsApp
+</a>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuBtn.addEventListener(
+    "click",
+    function() {
+
+        navLinks.classList.toggle("active");
+
+    }
+);
+
+
+/* CLOSE MOBILE MENU
+   WHEN LINK IS CLICKED
+*/
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function() {
+
+            navLinks.classList.remove("active");
+
+        }
+    );
+
+});
+
+
+/* =========================
+   PROPERTY SEARCH
+========================= */
+
+const searchInput =
+document.getElementById("searchInput");
+
+const typeFilter =
+document.getElementById("typeFilter");
+
+const priceFilter =
+document.getElementById("priceFilter");
+
+const searchButton =
+document.getElementById("searchButton");
+
+const searchResult =
+document.getElementById("searchResult");
+
+const noResults =
+document.getElementById("noResults");
+
+const properties =
+document.querySelectorAll(".property");
+
+
+function filterProperties() {
+
+    const search =
+        searchInput.value
+        .trim()
+        .toLowerCase();
+
+
+    const type =
+        typeFilter.value;
+
+
+    const price =
+        priceFilter.value;
+
+
+    let found = 0;
+
+
+    properties.forEach(
+        function(property) {
+
+
+            const location =
+                (
+                    property
+                    .dataset
+                    .location || ""
+                ).toLowerCase();
+
+
+            const propertyType =
+                property
+                .dataset
+                .type || "";
+
+
+            const propertyPrice =
+                Number(
+                    property
+                    .dataset
+                    .price || 0
+                );
+
+
+            /* LOCATION */
+
+            const matchesLocation =
+                search === "" ||
+                location.includes(search);
+
+
+            /* PROPERTY TYPE */
+
+            const matchesType =
+                type === "all" ||
+                propertyType === type;
+
+
+            /* PRICE */
+
+            const matchesPrice =
+                price === "all" ||
+                propertyPrice <= Number(price);
+
+
+            /* SHOW / HIDE */
+
+            if (
+                matchesLocation &&
+                matchesType &&
+                matchesPrice
+            ) {
+
+                property.style.display =
+                    "block";
+
+                found++;
+
+            } else {
+
+                property.style.display =
+                    "none";
+
+            }
+
+        }
+    );
+
+
+    /* SEARCH RESULT */
+
+    if (found > 0) {
+
+        noResults.style.display =
+            "none";
+
+
+        searchResult.innerHTML =
+            "✅ " +
+            found +
+            " " +
+            (
+                found === 1
+                ? "property"
+                : "properties"
+            ) +
+            " found.";
+
+    } else {
+
+        noResults.style.display =
+            "block";
+
+
+        searchResult.innerHTML =
+            "❌ No properties found.";
+
+    }
+
+
+    /* SCROLL TO RESULTS */
+
+    document
+    .getElementById("properties")
+    .scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* SEARCH BUTTON */
+
+searchButton.addEventListener(
+    "click",
+    filterProperties
+);
+
+
+/* ENTER KEY */
+
+searchInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            filterProperties();
+
+        }
+
+    }
+);
+
+
+/* FILTER WHEN SELECTING TYPE */
+
+typeFilter.addEventListener(
+    "change",
+    filterProperties
+);
+
+
+/* FILTER WHEN SELECTING PRICE */
+
+priceFilter.addEventListener(
+    "change",
+    filterProperties
+);
+
+
+/* =========================
+   PROPERTY DETAILS MODAL
+========================= */
+
+const propertyButtons =
+document.querySelectorAll(".property-btn");
+
+const modal =
+document.getElementById("propertyModal");
+
+const closeModal =
+document.getElementById("closeModal");
+
+
+propertyButtons.forEach(
+    function(button) {
+
+        button.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const title =
+                    button.dataset.title;
+
+
+                const location =
+                    button.dataset.location;
+
+
+                const price =
+                    button.dataset.price;
+
+
+                document
+                .getElementById("modalTitle")
+                .innerText =
+                    title;
+
+
+                document
+                .getElementById("modalLocation")
+                .innerText =
+                    "📍 " + location;
+
+
+                document
+                .getElementById("modalPrice")
+                .innerText =
+                    price;
+
+
+                modal.style.display =
+                    "flex";
+
+            }
+        );
+
+    }
+);
+
+
+/* CLOSE MODAL */
+
+closeModal.addEventListener(
+    "click",
+    function() {
+
+        modal.style.display =
+            "none";
+
+    }
+);
+
+
+/* CLICK OUTSIDE MODAL */
+
+window.addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === modal) {
+
+            modal.style.display =
+                "none";
+
+        }
+
+    }
+);
+
+
+/* ESCAPE KEY */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            modal.style.display =
+                "none";
+
+        }
+
+    }
+);
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+const contactForm =
+document.getElementById("contactForm");
+
+
+contactForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("name").value;
+
+
+        const phone =
+            document.getElementById("phone").value;
+
+
+        const email =
+            document.getElementById("email").value;
+
+
+        const interest =
+            document.getElementById("interest").value;
+
+
+        const message =
+            document.getElementById("message").value;
+
+
+        const whatsappMessage =
+            "Hello AMG Realtors,%0A%0A" +
+
+            "Name: " +
+            encodeURIComponent(name) +
+
+            "%0APhone: " +
+            encodeURIComponent(phone) +
+
+            "%0AEmail: " +
+            encodeURIComponent(email) +
+
+            "%0AInterest: " +
+            encodeURIComponent(interest) +
+
+            "%0AMessage: " +
+            encodeURIComponent(message);
+
+
+        window.open(
+            "https://wa.me/254796888555?text=" +
+            whatsappMessage,
+            "_blank"
+        );
+
+    }
+);
+
+
+/* =========================
+   INITIAL STATE
+========================= */
+
+window.addEventListener(
+    "load",
+    function() {
+
+        searchResult.innerHTML =
+            "🏠 Showing all available properties.";
+
+    }
+);
+
+</script>
+
+</body>
+</html>
